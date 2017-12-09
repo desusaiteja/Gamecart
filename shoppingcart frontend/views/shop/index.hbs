@@ -1,0 +1,23 @@
+<h1>{{shareurl}}</h1>
+{{#each products }}
+        <div class="row">
+            {{#each this }}
+            <div class="col-sm-6 col-md-4">
+                <div class="card" style="width: 20rem;">
+                    <img class="card-img-top" 
+                        src={{this.image_url}}
+                        alt="Card image cap" 
+                        class="img-responsive">
+                    <div class="card-body">
+                        <h4 class="card-title">{{this.name}}</h4>
+                        <p class="card-text">{{this.geners}}</p>
+                        <div class="clearfix">
+                        <p class="card-bold pull-left">${{this.price}}</p>
+                        <a href="/addcart/{{this.product_id}}" class="btn btn-success pull-right">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+{{/each}}

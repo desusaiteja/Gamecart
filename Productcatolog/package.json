@@ -1,0 +1,19 @@
+{
+  "name": "gamecart",
+  "version": "1.0.0",
+  "description": "Use for creating inventory",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node app.js"
+  },
+  "author": "Mohammed Athar",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "mongoose": "*",
+    "node-fetch": "^1.7.3",
+    "nodemon": "*"
+  }
+}

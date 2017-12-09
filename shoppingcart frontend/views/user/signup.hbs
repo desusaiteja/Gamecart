@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <h1>Sign Up</h1>
+        {{#if hasErrors}}
+            <div class="alert alert-danger">
+                {{#each messages}} 
+                    <p>{{this}}</p>
+                {{/each}}
+            </div>
+        {{/if}}
+        <form action="/signup/register" method="post">
+            <div class="form-group">
+                <label for="firstname">First Name: </label>
+                <input type="text" id="firstname" name="firstname" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="lasstname">Last Name: </label>
+                <input type="text" id="lasstname" name="lastname" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="email">E-Mail</label>
+                <input type="text" id="email" name="email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="password2">Re-Enter your Password</label>
+                <input type="password" id="password2" name="password2" class="form-control">
+            </div>
+            <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+    </div>
+</div>
